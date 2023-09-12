@@ -1,8 +1,8 @@
 [
     {
       "name": "KuPane",
-      "url": "apps/KuPane.zip",
-      "iconUrl": "icons/KuPane.icon.png",
+      "url": "https://github.com/kukusapp/collection/blob/main/apps/KuPane.dmg",
+      "iconUrl": "https://github.com/kukusapp/collection/blob/main/icons/KuPane.icon.png",
       "version": "0.0.1"
     }
   ]
