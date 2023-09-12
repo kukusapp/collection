@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuku's App Collection</title>
+    <title>My Apps Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,6 +41,13 @@
             transform: scale(1.05);
         }
 
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
         .download-btn {
             display: inline-block;
             background-color: rgb(163, 153, 162);
@@ -65,19 +72,30 @@
     </style>
 </head>
 <body>
-    <h1>Kuku's App Collection</h1>
+    <h1>Welcome to My Apps Page</h1>
     <div id="app-list">
-        <!-- Example App Item -->
-        <div class="app-item">
-            <h2>App Name</h2>
-            <p>App description here...</p>
-            <a href="#" class="download-btn">Download</a>
-        </div>
-        <!-- Add more app items as needed -->
+        <!-- App items will be dynamically populated here -->
     </div>
 
     <script>
-        // JavaScript code to fetch apps.json and populate the app list can be added here.
+        window.onload = function() {
+            fetch('apps.json')
+                .then(response => response.json())
+                .then(data => {
+                    const appList = document.getElementById('app-list');
+                    data.forEach(app => {
+                        const appItem = document.createElement('div');
+                        appItem.className = 'app-item';
+                        appItem.innerHTML = `
+                            <img src="${app.icon}" alt="${app.name} Icon" class="app-icon">
+                            <h2>${app.name}</h2>
+                            <p>Version: ${app.version}</p>
+                            <a href="${app.url}" class="download-btn">Download</a>
+                        `;
+                        appList.appendChild(appItem);
+                    });
+                });
+        }
     </script>
 </body>
 </html>
