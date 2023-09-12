@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Apps Page</title>
+    <title>Kuku's App Collection</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -72,7 +72,7 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to My Apps Page</h1>
+    <h1>Kuku's App Collection</h1>
     <div id="app-list">
         <!-- App items will be dynamically populated here -->
     </div>
@@ -86,9 +86,11 @@
                     data.forEach(app => {
                         const appItem = document.createElement('div');
                         appItem.className = 'app-item';
+                        const description = app.description.split('\n').map(para => `<p>${para}</p>`).join('');
                         appItem.innerHTML = `
                             <img src="${app.iconUrl}" alt="${app.name} Icon" class="app-icon">
                             <h2>${app.name}</h2>
+                            ${description}
                             <p>Version: ${app.version}</p>
                             <a href="${app.url}" class="download-btn">Download</a>
                         `;

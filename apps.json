@@ -1,8 +1,9 @@
 [
     {
       "name": "KuPane",
-      "url": "https://github.com/kukusapp/collection/blob/main/apps/KuPane.dmg",
-      "iconUrl": "https://github.com/kukusapp/collection/blob/main/icons/KuPane.icon.png",
+      "url": "https://raw.githubusercontent.com/kukusapp/collection/main/apps/KuPane.dmg",
+      "iconUrl": "https://raw.githubusercontent.com/kukusapp/collection/main/icons/KuPane.icon.png",
+      "description": "KuPane is an innovative utility for managing window layouts using keyboard shortcuts. Resize and position windows effortlessly and improve your productivity.",
       "version": "0.1"
     }
   ]
