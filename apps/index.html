@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuku's App Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(179, 201, 192);
+            color: rgb(163, 153, 162);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: rgb(163, 153, 162);
+        }
+
+        #app-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .app-item {
+            background-color: white;
+            border-radius: 10px;
+            width: 250px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .app-item:hover {
+            transform: scale(1.05);
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: rgb(163, 153, 162);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: rgb(179, 201, 192);
+        }
+
+        @media (max-width: 768px) {
+            #app-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Kuku's App Collection</h1>
+    <div id="app-list">
+        <!-- Example App Item -->
+        <div class="app-item">
+            <h2>App Name</h2>
+            <p>App description here...</p>
+            <a href="#" class="download-btn">Download</a>
+        </div>
+        <!-- Add more app items as needed -->
+    </div>
+
+    <script>
+        // JavaScript code to fetch apps.json and populate the app list can be added here.
+    </script>
+</body>
+</html>
